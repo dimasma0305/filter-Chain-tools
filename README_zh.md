@@ -41,7 +41,7 @@ Fuzz依靠Fuzzer.php实现
 
 在iconv_list.php中定义你fuzz需要的字符集
 
-![img](https://dqgom7v7dl.feishu.cn/space/api/box/stream/download/asynccode/?code=NjYwOGE5N2IwNjUxOTQ1ZjViMmQ1MTg0ODhhMWMyZmVfcXRBZFZseWFFaEtHbmVOZGV5TlBSTjFKVnppTEE3R3dfVG9rZW46Ym94Y25ib25qbHVoQmE1clk1YU5OV240RkF2XzE2NzQ0OTIxMzg6MTY3NDQ5NTczOF9WNA)
+![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674490580048-be078983-c35f-4b53-9597-871ac1a4a2d0.png)
 
 根据对应环境选择对应的字符集合：
 
@@ -49,11 +49,11 @@ Fuzz依靠Fuzzer.php实现
 iconv -l
 ```
 
-![img](https://dqgom7v7dl.feishu.cn/space/api/box/stream/download/asynccode/?code=MjU2MTZmMTcyYmJjOTkzY2ZlMGM0MGU3MGRiYjk4OTVfM05CeldJeERESmkyWVdibmpxZGZMZGo2SFlnbVl1Q2RfVG9rZW46Ym94Y25FUXZYeVdQUXJkemNWRnliV2lPdU80XzE2NzQ0OTIxMzg6MTY3NDQ5NTczOF9WNA)
+![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674490476175-f28badfa-59de-4265-8bae-43e0bd65da3e.png)
 
 在Fuzzer.php中设置好参数：
 
-![img](https://dqgom7v7dl.feishu.cn/space/api/box/stream/download/asynccode/?code=YWNiNDRhYTEwN2UxNzExZDcwN2VkNzg5ZTZiMDA5YTVfa2lCRUVIdGt6enZQWjVGQ2FDRlRHS2F3eFAyeGtaNGhfVG9rZW46Ym94Y25WRWx5TVliQVJEY1dxY201NFp3R2ZmXzE2NzQ0OTIxMzg6MTY3NDQ5NTczOF9WNA)
+![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674490644217-7ef63718-9106-4796-8d61-e31357f47d80.png)
 
 使用下面命令即可开始Fuzz：
 
@@ -72,13 +72,13 @@ Filter链的生成依靠Generator.py实现。
 
 如果你要使用第一种模式，项目下载时就附带好了对应hexcode的字典，只需要在文件开头设置参数即可：
 
-![img](https://dqgom7v7dl.feishu.cn/space/api/box/stream/download/asynccode/?code=OTcxNTM4MzVhOGRmNmNjMmE1NGE1ZDczN2JkOTY1OTZfcHVzM1JJazQ4MkZQcWFnazUwV3RBZ3BLdFFZU3dxc3JfVG9rZW46Ym94Y252YVJQekxmWW1zZVpCVjFuRXJLcjliXzE2NzQ0OTIxMzg6MTY3NDQ5NTczOF9WNA)
+![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674491278243-f9fc0f34-db7f-495f-a138-9eea1d250c30.png)
 
 当然您也可以根据项目原理自己生成。
 
 如果您使用第二种模式，项目也准备了一份Fuzz好的单字母字典在dictionary.py中：
 
-![img](https://dqgom7v7dl.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY4ZWVmYTM3YTdmNzQ2ZTNlNzg2NDI0ZDBlYzI1MGNfbW5SQzdpSEFZY2tTZVRwTTFBaDJnMTlxdGFrSWFqckRfVG9rZW46Ym94Y24wRjRsZnVDQlhDM1BVV0YySHpCb05oXzE2NzQ0OTIxMzg6MTY3NDQ5NTczOF9WNA)
+![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674491375475-11fb475f-cd15-4032-8045-b62abd1612db.png)
 
 您也可以根据自己的需求Fuzz，流程大致如下：
 
