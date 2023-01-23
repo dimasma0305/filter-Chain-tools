@@ -41,7 +41,7 @@ Fuzz relies on Fuzzer.php
 
 Define the character set you need for fuzz in iconv_list.php
 
-![img](https://dqgom7v7dl.feishu.cn/space/api/box/stream/download/asynccode/?code=MjczNTFlYjZmMjg0OGZiYTQxOGI2MjA4NGU1MDZjNTBfYVgwbUdiUmVFTVpBaFBjckI4Zld3QUNqRzVSNnRlaFNfVG9rZW46Ym94Y25ib25qbHVoQmE1clk1YU5OV240RkF2XzE2NzQ0OTE4Nzg6MTY3NDQ5NTQ3OF9WNA)
+![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674491278243-f9fc0f34-db7f-495f-a138-9eea1d250c30.png)
 
 Select the corresponding character set according to the corresponding environment:
 
@@ -51,11 +51,11 @@ iconv -l
 
 
 
-![img](https://dqgom7v7dl.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzg5ZWY4ZmY4ZDlhNzk1YzIzYWI1NTcwNTU3OWRkYzdfZFJjTUhiTVdhcWJ4a1UwYXpVbm9jYlp4QlI4OEUwYjFfVG9rZW46Ym94Y25FUXZYeVdQUXJkemNWRnliV2lPdU80XzE2NzQ0OTE4Nzg6MTY3NDQ5NTQ3OF9WNA)
+![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674490476175-f28badfa-59de-4265-8bae-43e0bd65da3e.png)
 
 Set the parameters in the Fuzzer.php:
 
-![img](https://dqgom7v7dl.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWQ2NjcxOTdlMjExYmUwMWU4NzUxYzk0MWZmYjkyYjZfbUsza0NwbVJoWFIyaGF0QXB1RW81WnZDQ3R5UThsZGdfVG9rZW46Ym94Y25WRWx5TVliQVJEY1dxY201NFp3R2ZmXzE2NzQ0OTE4Nzg6MTY3NDQ5NTQ3OF9WNA)
+![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674490644217-7ef63718-9106-4796-8d61-e31357f47d80.png)
 
 Start Fuzz with the following command:
 
@@ -74,13 +74,13 @@ Two modes are currently available:
 
 If you want to use the first mode, the dictionary corresponding to hexcode is included with the project download, just set the parameters at the beginning of the file:
 
-![img](https://dqgom7v7dl.feishu.cn/space/api/box/stream/download/asynccode/?code=NzFjYmJmY2IwYTNjOTE4ZjVlNDIyMzAyZmI3YzUxNzJfZWJMT2thZzJySThPeHIyZnFjMjJvNUg1Nk1iWTEzcnJfVG9rZW46Ym94Y252YVJQekxmWW1zZVpCVjFuRXJLcjliXzE2NzQ0OTE4Nzg6MTY3NDQ5NTQ3OF9WNA)
+![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674491278243-f9fc0f34-db7f-495f-a138-9eea1d250c30.png)
 
 Of course, you can also generate your own according to the project principle.
 
 If you use the second mode, the project also prepared a Fuzz good word dictionary in dictionary.py:
 
-![img](https://dqgom7v7dl.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2FiMjlmOWE2YmQ3NzBiY2NkYzE1MzE0YTFlNTZjMDBfOGM3cG81UXE2azJWR1J2OTk4QTVZOFVJNXM2YXZWMmtfVG9rZW46Ym94Y24wRjRsZnVDQlhDM1BVV0YySHpCb05oXzE2NzQ0OTE4Nzg6MTY3NDQ5NTQ3OF9WNA)
+![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674491375475-11fb475f-cd15-4032-8045-b62abd1612db.png)
 
 You can also Fuzz according to your own needs, the process is roughly as follows:
 
