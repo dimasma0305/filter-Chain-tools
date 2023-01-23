@@ -83,7 +83,7 @@ while(1){ //这个死循环是fuzz的核心，通过不断的和陌生人(随机
             $op_all = "";
             continue;
         }
-        $op_all = $op_all = getRandomSeedFromDir('./res/');
+        $op_all = getRandomSeedFromDir('./res/');
         
         continue;
     }
@@ -112,7 +112,7 @@ while(1){ //这个死循环是fuzz的核心，通过不断的和陌生人(随机
                 $op_all = "";
                 continue;
             }
-            $op_all = $op_all = getRandomSeedFromDir('./res/');
+            $op_all = getRandomSeedFromDir('./res/');
             continue;
     }
     if($tmp_str === $init_value){
@@ -121,7 +121,7 @@ while(1){ //这个死循环是fuzz的核心，通过不断的和陌生人(随机
             $op_all = "";
             continue;
         }
-        $op_all = $op_all = getRandomSeedFromDir('./res/');
+        $op_all = getRandomSeedFromDir('./res/');
         continue;
     }
     else{
