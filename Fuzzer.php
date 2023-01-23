@@ -89,7 +89,7 @@ while(1){ //这个死循环是fuzz的核心，通过不断的和陌生人(随机
     }
     $r = strstr($tmp_str,"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",true);
     if($r === false){
-        print("Oh $r is non-compliance ! skip now! \n");
+        # print("Oh $r is non-compliance ! skip now! \n");
         continue;
     }
     preg_match_all("/([a-zA-Z0-9])/",$r, $res);
