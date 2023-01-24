@@ -41,7 +41,7 @@ Fuzz relies on Fuzzer.php
 
 Define the character set you need for fuzz in iconv_list.php
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674491278243-f9fc0f34-db7f-495f-a138-9eea1d250c30.png)
+![image](https://user-images.githubusercontent.com/41804496/214242583-de1f6381-5a2f-4c0d-8522-eef49e121363.png)
 
 Select the corresponding character set according to the corresponding environment:
 
@@ -51,7 +51,7 @@ iconv -l
 
 
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/21803058/1674490476175-f28badfa-59de-4265-8bae-43e0bd65da3e.png)
+![image](https://user-images.githubusercontent.com/41804496/214242443-418dccf5-26f9-4fc4-b1ad-22f284880800.png)
 
 Set the parameters in the Fuzzer.php:
 
