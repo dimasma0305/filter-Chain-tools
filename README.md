@@ -51,7 +51,7 @@ iconv -l
 
 
 
-![image](https://user-images.githubusercontent.com/41804496/214242443-418dccf5-26f9-4fc4-b1ad-22f284880800.png)
+![image](https://user-images.githubusercontent.com/41804496/214242703-6708ec67-b5af-45c6-83c9-a476a1bc33bb.png)
 
 Set the parameters in the Fuzzer.php:
 
