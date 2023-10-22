@@ -27,21 +27,21 @@ $max_c_len = strlen($init_value) * 5;
 
 
 function getseeds($dir){ //获取文件夹中的所有文件名
-    $handler = opendir($dir);  
-    while (($filename = readdir($handler)) !== false) 
+    $handler = opendir($dir);
+    while (($filename = readdir($handler)) !== false)
     {
-        if ($filename !== "." && $filename !== "..") 
-        {  
-            $files[] = $filename ;  
-        } 
-    }  
-    closedir($handler);  
+        if ($filename !== "." && $filename !== "..")
+        {
+            $files[] = $filename ;
+        }
+    }
+    closedir($handler);
     return $files;
 }
 /*
     获取res文件夹中存在的字典作为基础种子进行再拼接
-*/ 
-function getRandomSeedFromDir($dir){ 
+*/
+function getRandomSeedFromDir($dir){
     $files = getseeds($dir);
     $r_t = rand(1,999999) % sizeof($files);
     $seed = file_get_contents($dir.'/'.$files[$r_t]);
@@ -57,10 +57,10 @@ while(1){ //这个死循环是fuzz的核心，通过不断的和陌生人(随机
     $icon1 = $iconv_list[$rand_2 % count($iconv_list)];
     $icon2 = $iconv_list[$rand_3 % count($iconv_list)];
     $op = str_replace('*',$icon1.'.'.$icon2,$filter_str); //拼接，相识，is code,is life(x
-    
+
     $tmp_str = file_get_contents('php://filter/'.$op_all.(($op_all == "")?'':'|').$op.'|convert.base64-decode|convert.base64-encode|convert.iconv.UTF8.UTF7/resource='.$input); //将随机拼接好的字符规则进行利用读取并存储在$tmp_str中
 
-    # print("Try fuzz "."php://filter/".$op_all.(($op_all == "")?'':'|').$op.'|convert.base64-decode|convert.base64-encode|convert.iconv.UTF8.UTF7/resource='.$input."\n"); 
+    # print("Try fuzz "."php://filter/".$op_all.(($op_all == "")?'':'|').$op.'|convert.base64-decode|convert.base64-encode|convert.iconv.UTF8.UTF7/resource='.$input."\n");
 
     if(!$tmp_str){ //如果$tmp_str不存在（拼接之后不能生成）就跳过
         continue;
@@ -84,7 +84,7 @@ while(1){ //这个死循环是fuzz的核心，通过不断的和陌生人(随机
             continue;
         }
         $op_all = getRandomSeedFromDir('./res/');
-        
+
         continue;
     }
     $r = strstr($tmp_str,"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",true);

